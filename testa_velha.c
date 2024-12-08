@@ -12,7 +12,15 @@ void testarVerificaJogoDaVelha() {
         {0, 0, 0}
     };
     assert(verificaJogoDaVelha(tabuleiro1) == -1);
-   
+    printf("Teste 1 (Tabuleiro vazio): OK\n");
+
+   // Teste 2: Vitória de X em uma linha
+    int tabuleiro2[3][3] = {
+        {1, 1, 1},
+        {0, 2, 0},
+        {0, 0, 2}
+    };
+    assert(verificaJogoDaVelha(tabuleiro2) == 1);
 }
 
 int main() {

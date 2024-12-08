@@ -10,6 +10,9 @@ int verificaJogoDaVelha(int matriz[3][3]) {
             if (matriz[i][j] == 1) x_count++;
             else if (matriz[i][j] == 2) o_count++;
         }
+    }
+
+    
 
     // Verificar se o jogo está indefinido (há posições vazias)
     for (int i = 0; i < 3; i++) {
@@ -21,4 +24,3 @@ int verificaJogoDaVelha(int matriz[3][3]) {
     // Se nenhum dos casos anteriores for verdadeiro, é empate
     return 0;
 }
-
