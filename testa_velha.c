@@ -23,6 +23,15 @@ void testarVerificaJogoDaVelha() {
     assert(verificaJogoDaVelha(tabuleiro2) == 1);
     printf("Teste 2 (Vitória de X em uma linha): OK\n");
 
+    // Teste 3: Vitória de O em uma coluna
+    int tabuleiro3[3][3] = {
+        {1, 2, 1},
+        {0, 2, 0},
+        {1, 2, 0}
+    };
+    assert(verificaJogoDaVelha(tabuleiro3) == 2);
+    printf("Teste 3 (Vitória de O em uma coluna): OK\n");
+
 }
 
 int main() {
