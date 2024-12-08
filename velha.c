@@ -35,4 +35,17 @@ int verificaJogoDaVelha(int matriz[3][3]) {
         }
     }
 
+     // Verificar diagonais
+    if (matriz[0][0] == matriz[1][1] && matriz[1][1] == matriz[2][2]) {
+        if (matriz[0][0] == 1) return 1; // X venceu
+        if (matriz[0][0] == 2) return 2; // O venceu
+    }
+    if (matriz[0][2] == matriz[1][1] && matriz[1][1] == matriz[2][0]) {
+        if (matriz[0][2] == 1) return 1; // X venceu
+        if (matriz[0][2] == 2) return 2; // O venceu
+    }
+
+    // Se nenhum dos casos anteriores for verdadeiro, é empate
+    return 0;
+
 }
