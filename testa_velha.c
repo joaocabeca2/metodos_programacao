@@ -21,6 +21,8 @@ void testarVerificaJogoDaVelha() {
         {0, 0, 2}
     };
     assert(verificaJogoDaVelha(tabuleiro2) == 1);
+    printf("Teste 2 (Vitória de X em uma linha): OK\n");
+
 }
 
 int main() {

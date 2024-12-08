@@ -12,7 +12,13 @@ int verificaJogoDaVelha(int matriz[3][3]) {
         }
     }
 
-    
+     // Verificar linhas
+    for (int i = 0; i < 3; i++) {
+        if (matriz[i][0] == matriz[i][1] && matriz[i][1] == matriz[i][2]) {
+            if (matriz[i][0] == 1) return 1; // X venceu
+            if (matriz[i][0] == 2) return 2; // O venceu
+        }
+    }
 
     // Verificar se o jogo está indefinido (há posições vazias)
     for (int i = 0; i < 3; i++) {
@@ -21,6 +27,6 @@ int verificaJogoDaVelha(int matriz[3][3]) {
         }
     }
 
-    // Se nenhum dos casos anteriores for verdadeiro, é empate
+
     return 0;
 }
