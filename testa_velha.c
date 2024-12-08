@@ -5,12 +5,13 @@
 void testarVerificaJogoDaVelha() {
     printf("Inicializando os testes...\n");
 
+    // Teste 1 tabuleiro vazio (indefinido)
     int tabuleiro1[3][3] = {
         {0, 0, 0},
         {0, 0, 0},
         {0, 0, 0}
     };
-    verificaJogoDaVelha(tabuleiro1);
+    assert(verificaJogoDaVelha(tabuleiro1) == -1);
    
 }
 
